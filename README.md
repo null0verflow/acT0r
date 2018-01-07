@@ -7,6 +7,6 @@ only in beta
 
 ## Disclaimer:
 - for educational purpose only
-  - I personally bought MO16 license, i did NOT use MO16 for free
+  - I personally bought MO16 license, i did NOT and will NOT use MO16 for free
 - I do NOT encourage people to use unlicensed version 
   
