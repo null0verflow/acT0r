@@ -6,5 +6,7 @@ only in beta, pls feedback
 for windows only
 
 ## Disclaimer:
-- for education purpose only
-  - I personally bought MCSO16 license, i did NOT use MCO16 for free
+- for educational purpose only
+  - I personally bought MO16 license, i did NOT use MO16 for free
+- I do NOT encourage people to use unlicensed version 
+  
