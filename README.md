@@ -1,9 +1,9 @@
 # acT0r
-Active microsoft office 2016 for 64 bit devices only
+for microsoft office 2016, 64 bit windows devices only
 
-only in beta, pls feedback
+only in beta
 
-for windows only
+
 
 ## Disclaimer:
 - for educational purpose only
