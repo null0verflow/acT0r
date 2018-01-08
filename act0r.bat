@@ -1,5 +1,3 @@
-
-
 @echo off
 
 :STP
@@ -25,6 +23,14 @@ echo thank you for using this program (this is just a beta), pls feedback!
 echo This could fail multiple times, try again (for office 2016, 64bit devices only) (remember to close office and turn of wifi) 
 echo Loading.... 
 ping n- 2 127.0.0.1>nul
+echo Killing Microsoft Office.... 
+net stop ClickToRunSvc > NUL 2>&1
+taskkill /F /IM EXCEL.EXE > NUL 2>&1
+taskkill /F /IM POWERPNT.EXE > NUL 2>&1
+taskkill /F /IM WINWORD.EXE > NUL 2>&1
+taskkill /F /IM OfficeClickToRun.exe > NUL 2>&1
+echo DONE! (remember: you have to mainly exit programs yourself, it may not kill all proccesses)
+
 echo Press any key to continue:
 set/p input=
 cd ..
@@ -49,11 +55,28 @@ cscript OSPP.VBS /sethst:kms.digiboy.ir
 cscript OSPP.VBS /act
 cscript OSPP.VBS /dstatus
 
+echo starting Microsoft office...
+net start ClickToRunSvc > NUL 2>&1
+echo DONE! (remember: you have to mainly start programs yourself, it may not start all proccesses)
+
+echo if the program fail, try again or try to run as admin, buy microsoft office or use free trail here (press b to go to, c to cancel, a to try again as admin)
+echo if you type wrong, this will not allow you to type again (restart the program)-missing function!
+set/p "web=>"
+
+if %web% ==b goto WEB
+if %web% ==c goto DONE
+if %web% ==a goto RAD
+
 :PO
 cscript OSPP.VBS /inpkey: XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99 
 cscript OSPP.VBS /sethst:kms.digiboy.ir
 cscript OSPP.VBS /act
 cscript OSPP.VBS /dstatus
+
+echo starting Microsoft office...
+net start ClickToRunSvc > NUL 2>&1
+echo DONE! (remember: you have to mainly start programs yourself, it may not start all proccesses)
+
 echo if the program fail, try again or try to run as admin, buy microsoft office or use free trail here (press b to go to, c to cancel, a to try again as admin)
 echo if you type wrong, this will not allow you to type again (restart the program)-missing function!
 set/p "web=>"
