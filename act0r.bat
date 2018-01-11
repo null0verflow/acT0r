@@ -1,5 +1,10 @@
+rem You can convert this to .exe, it might not work with your version
+rem i recommend not to use this, just for educational purpose only
+rem By MS2016 your own :P
+
 @echo off
 
+::Checking Windows version
 :STP
 Set _os_bitness=64
 IF %PROCESSOR_ARCHITECTURE% == x86 (
@@ -11,6 +16,7 @@ cd ..
 cd ..
 cd ..   
 
+::Checking files
 C:
     IF EXIST C:\"Program files (x86)"\"Microsoft Office"\Office16\ GOTO CON
     CD \"Program files (x86)"
@@ -49,6 +55,9 @@ set/p "type=>"
 if %type% ==p goto PO
 if NOT %type% ==p goto NP
 
+
+::Main function for custom
+
 :NP
 cscript OSPP.VBS /inpkey: %type% 
 cscript OSPP.VBS /sethst:kms.digiboy.ir
@@ -67,6 +76,7 @@ if %web% ==b goto WEB
 if %web% ==c goto DONE
 if %web% ==a goto RAD
 
+::Main function for default
 :PO
 cscript OSPP.VBS /inpkey: XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99 
 cscript OSPP.VBS /sethst:kms.digiboy.ir
@@ -114,6 +124,7 @@ exit
 :DONE
 pause
 
+:: Run as admin option
 :RAD
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
 
