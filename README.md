@@ -5,7 +5,7 @@ only in beta
 
 I haven't tested this 2016 updated version . (
 
-May be work with 2015 and below; only tested with 2016 when it first released (I reinstalled MO16 and bought of course)
+Maybe works with 2015 and below; only tested with 2016 when it first released (I reinstalled MO16 and bought of course)
 
 ## Disclaimer:
 - for educational and experimental purpose only
