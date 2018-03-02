@@ -1,6 +1,6 @@
 rem You can convert this to .exe, it might not work with your version
 rem i recommend not to use this, just for educational purpose only
-rem By MS2016 your own :P
+rem Buy MS2016 your own :P
 
 @echo off
 
