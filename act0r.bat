@@ -42,8 +42,8 @@ cd Program files (x86)
 cd Microsoft Office
 cd Office16
 
-echo To use provided key (which is used before), type "p":
-
+echo To use provided key (which is used before) and host, type "p":
+set/p "type=>"
  
 if %type% ==p goto PO
 if NOT %type% ==p goto NP
