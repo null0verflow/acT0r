@@ -11,10 +11,7 @@ IF %PROCESSOR_ARCHITECTURE% == x86 (
   IF NOT DEFINED PROCESSOR_ARCHITEW6432 Set _os_bitness=32
   )
 IF NOT %_os_bitness% ==64 goto FAIL
-cd ..
-cd ..
-cd ..
-cd ..   
+cd\
 
 ::Checking files
 C:
@@ -48,7 +45,7 @@ cd Program files (x86)
 cd Microsoft Office
 cd Office16
 echo Type in your activation key (New key or used key is okay)(it should looks like this: XXXXX-XXXXX-XXXXX-XXXXX-XXXX.) 
-echo if you type wrong, this will not allow you to type again (restart the program)-missing function!
+echo if you type wrong, this will not allow you to type again (restart the program)
 echo To use provided key (which is used before), type "p":
 set/p "type=>"
  
@@ -71,7 +68,7 @@ net start ClickToRunSvc > NUL 2>&1
 echo DONE! (remember: you have to mainly start programs yourself, it may not start all proccesses)
 
 echo if the program fail, try again or try to run as admin, buy microsoft office or use free trail here (press b to go to, c to cancel, a to try again as admin)
-echo if you type wrong, this will not allow you to type again (restart the program)-missing function!
+echo if you type wrong, this will not allow you to type again (restart the program)
 set/p "web=>"
 
 if %web% ==b goto WEB
@@ -90,7 +87,7 @@ net start ClickToRunSvc > NUL 2>&1
 echo DONE! (remember: you have to mainly start programs yourself, it may not start all proccesses)
 
 echo if the program fail, try again or try to run as admin, buy microsoft office or use free trail here (press b to go to, c to cancel, a to try again as admin)
-echo if you type wrong, this will not allow you to type again (restart the program)-missing function!
+echo if you type wrong, this will not allow you to type again (restart the program)
 set/p "web=>"
 
 if %web% ==b goto WEB
@@ -126,7 +123,7 @@ exit
 :DONE
 pause
 
-:: Run as admin option
+:: Run as admin option (may not help much
 :RAD
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
 
