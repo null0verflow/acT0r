@@ -37,10 +37,7 @@ echo DONE! (remember: you have to mainly exit programs yourself, it may not kill
 echo Press any key to continue:
 set/p input=
 cd ..
-cd ..
-cd ..
-cd ..
-cd ..
+cd\
 cd Program files (x86)
 cd Microsoft Office
 cd Office16
