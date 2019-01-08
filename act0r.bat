@@ -1,5 +1,5 @@
 rem You can convert this to .exe, it might not work with your version
-rem i recommend not to use this, just for educational purpose only
+rem i don't recommend using this, just for educational purpose only
 rem Buy MS2016 your own :P
 
 @echo off
@@ -24,8 +24,8 @@ C:
    CD \"Program files (x86)"
 
 :CON
-echo copyright @bobdinh139 
-echo thank you for using this program (this is just a beta), pls feedback! 
+echo @bobdinh139 
+echo thank you for using this program (this is just a beta)! 
 echo This could fail multiple times, try again (for office 2016, 64bit devices only) (remember to close office and turn of wifi) 
 echo Loading.... 
 ping n- 2 127.0.0.1>nul
@@ -51,7 +51,7 @@ echo Type in your activation key (New key or used key is okay)(it should looks l
 echo if you type wrong, this will not allow you to type again (restart the program)-missing function!
 echo To use provided key (which is used before), type "p":
 set/p "type=>"
-
+ 
 if %type% ==p goto PO
 if NOT %type% ==p goto NP
 
@@ -59,8 +59,10 @@ if NOT %type% ==p goto NP
 ::Main function for custom
 
 :NP
+echo Type in host:
+set/p "host=>"
 cscript OSPP.VBS /inpkey: %type% 
-cscript OSPP.VBS /sethst:kms.digiboy.ir
+cscript OSPP.VBS /sethst:%host%
 cscript OSPP.VBS /act
 cscript OSPP.VBS /dstatus
 
