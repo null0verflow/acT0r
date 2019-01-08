@@ -41,10 +41,9 @@ cd\
 cd Program files (x86)
 cd Microsoft Office
 cd Office16
-echo Type in your activation key (New key or used key is okay)(it should looks like this: XXXXX-XXXXX-XXXXX-XXXXX-XXXX.) 
-echo if you type wrong, this will not allow you to type again (restart the program)
+
 echo To use provided key (which is used before), type "p":
-set/p "type=>"
+
  
 if %type% ==p goto PO
 if NOT %type% ==p goto NP
@@ -53,6 +52,9 @@ if NOT %type% ==p goto NP
 ::Main function for custom
 
 :NP
+echo Type in your activation key (New key or used key is okay)(it should looks like this: XXXXX-XXXXX-XXXXX-XXXXX-XXXX.) 
+echo if you type wrong, this will not allow you to type again (restart the program)
+set/p "type=>"
 echo Type in host:
 set/p "host=>"
 cscript OSPP.VBS /inpkey: %type% 
